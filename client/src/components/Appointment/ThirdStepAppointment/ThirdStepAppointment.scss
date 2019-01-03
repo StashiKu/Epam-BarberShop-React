@@ -1,0 +1,27 @@
+.wrapper {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8
+    }
+}
+
+
+.jake--hover {
+    background-color: #2879c5;
+    padding: 6px;
+    &:hover {
+        border: 3px solid #ff9283;
+        box-sizing: border-box;
+    }
+}
+.scratchy--hover {
+    padding: 10px;
+    background: cadetblue;
+    &:hover {
+        border: 3px solid darkkhaki;
+        
+    }
+}

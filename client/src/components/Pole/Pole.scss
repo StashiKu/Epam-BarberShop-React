@@ -1,0 +1,195 @@
+$backRed: #DF5646;
+$solidRed: #E33035;
+$darkRed: #BE4345;
+$brickRed: #EB755D;
+
+$purple: #563B5E;
+$borderPurple: #5C496D;
+
+$white: #E7EBEB;
+
+$lightGray: #DADCE2;
+$gray: #BDB2C2;
+$medGray: #9993A8;
+$darkGray: #83738F;
+
+$poleBorder: 7px solid $borderPurple;
+$brick: 7px solid $brickRed;
+
+* {
+  box-sizing: border-box;  
+}
+.pole {
+  height: 335px;
+  width: 130px;
+  margin: 50px auto;
+  position: relative;
+  &-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 59%;
+  }
+}
+
+.head {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 50%;
+  margin-left: -60px;
+  border: $poleBorder;
+  border-radius: 50%;
+  background: $lightGray;
+  overflow: hidden;
+  padding-top: 6px;
+  box-shadow: inset 0 -60px 0 -30px $medGray;
+  
+  &:after {
+    content: "";
+    width: 70px;
+    height: 50px;
+    left: 50%;
+    top: 5px;
+    margin-left: -35px;
+    background: $white;
+    border-radius: 50%;
+    position: absolute;
+  }
+}
+
+.head-base {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  margin-left: -50px;
+  height: 16px;
+  border: $poleBorder;
+  border-bottom: none;
+  width: 100px;
+  z-index: 2;
+  background: $lightGray;
+  box-shadow: inset 0 -4px 0 0 $medGray;
+}
+
+.loader-head {
+  position: absolute;
+  height: 38px;
+  width: 100%;
+  border: $poleBorder;
+  top: 106px;
+  z-index: 2;
+  background: $medGray;
+  box-shadow: inset 0 6px 0 0 $lightGray;
+}
+
+.loader {
+  position: absolute;
+  height: 177px;
+  width: 102px;
+  top: 124px;
+  left: 50%;
+  margin-left: -51px;
+  border: $poleBorder;
+  background: $white;
+  z-index: 3;
+  overflow: hidden;
+  
+  &:after {
+    content: "";
+    width: 50%;
+    height: 177px;
+    background: $darkGray;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.2;
+  }
+  
+  .inset {
+    border-right: 6px solid $white;
+    border-left: 6px solid $white;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    animation: spin 4s infinite linear;
+    
+    div {
+      transform: rotate(-40deg);
+    }
+  }
+  
+  .red {
+    height: 28px;
+    width: 200%;
+    margin-bottom: 42px;
+    background: $solidRed;
+    position: relative;
+    left: -50%;
+  }
+  
+  .blue {
+    height: 28px;
+    width: 200%;
+    margin-bottom: 42px;
+    background: $purple;
+    position: relative;
+    left: -50%;
+  }
+}
+
+.loader-base {
+  position: absolute;
+  height: 38px;
+  width: 100%;
+  border: $poleBorder;
+  bottom: 16px;
+  z-index: 2;
+  background: $lightGray;
+  box-shadow: inset 0 -6px 0 0 $medGray;
+}
+
+.base {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50px;
+  height: 16px;
+  border: $poleBorder;
+  border-top: none;
+  width: 100px;
+  z-index: 2;
+  background: $lightGray;
+  box-shadow: inset 0 -4px 0 0 $medGray;
+  
+}
+
+@keyframes spin {
+  from {
+    transform: translateY(0);
+  }
+  
+  to {
+    transform: translateY(-140px);  
+  }
+}
+
+.title {
+    font-family: 'Bowlby One', cursive;
+    font-size: 179px;
+    color: cadetblue;
+    &__spring {
+        font-family: 'Marck Script', cursive;
+        color: bisque;
+    }
+}
+
+@media (max-width: 1400px) {
+  .title {
+    font-size: 110px
+  }
+  .pole-wrapper {
+    top: 40%;
+    left: 57%;
+    transform: scale(0.7);
+  }
+}

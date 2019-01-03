@@ -1,0 +1,18 @@
+.prise {
+    font-weight: 500;
+    font-size: 20px;
+    &-par {
+        margin-top: 25px;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 0;
+        &__sum {
+            color: cornflowerblue;
+            font-size: 26px; 
+            text-align: center;
+            &>span {
+                color: #848e98;
+            }
+        }
+    }
+}
